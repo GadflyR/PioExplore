@@ -15,7 +15,7 @@ body, html {
     display: flex;
     position: relative;
     background-repeat: no-repeat;
-    height: 80vh; /* 80% of the viewport height */
+    height: 88vh;
     width: 100%;
     background: url('images/campus.png') no-repeat center center;
 
