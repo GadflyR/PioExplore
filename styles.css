@@ -10,7 +10,21 @@ body, html {
 .slider-imgs {
     background-size: cover !important;
     background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
     background-repeat: no-repeat;
     height: 80vh; /* 80% of the viewport height */
     width: 100%;
+    background: url('images/campus.png') no-repeat center center;
+
+}
+
+.slider-imgs .background-title {
+    font-family: 'Playfair Display', serif;font-size: 80px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
