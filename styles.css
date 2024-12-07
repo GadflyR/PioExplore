@@ -1,4 +1,7 @@
-/* styles.css */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('fonts/AARDV.TTF'),
+}
 
 body, html {
     margin: 0;
@@ -22,7 +25,7 @@ body, html {
 }
 
 .slider-imgs .background-title {
-    font-family: 'Playfair Display', serif;font-size: 80px;
+    font-family: 'TitleFont', serif;font-size: 80px;
     font-weight: 800;
     color: white;
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
