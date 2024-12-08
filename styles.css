@@ -12,7 +12,7 @@ body, html {
 }
 
 .slider-imgs {
-    background: url('images/campus.png') no-repeat center center fixed;
+    background: url('images/campus.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
