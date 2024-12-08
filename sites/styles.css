@@ -1,103 +1,108 @@
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
-    background: #fff;
-    color: #000;
+    padding: 0;
+    font-family: "Georgia", serif;
+    background-color: #ffffff;
+    color: #000000;
     line-height: 1.6;
-  }
-  
-  header {
-    background: #000;
-    color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  
-  header .header-content {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   
-  header h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
+  /* Hero Section */
+  .hero-related {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 -1rem;
+  }
+  
+  .hero-related .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-related .header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 0 1rem;
+  }
+  
+  .hero-related h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
-  header p {
-    font-weight: 300;
-    font-size: 1.1rem;
-    opacity: 0.9;
+  .hero-related p {
+    font-size: 1rem;
+    color: #e0e0e0;
   }
   
+  /* Cards Section */
   .cards-container {
+    padding: 3rem 0;
     display: grid;
     gap: 2rem;
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   
   .card {
-    background: #fff;
-    border: 1px solid #000;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(100%);
-  }
-  
-  .card-content {
+    border: 1px solid #000000;
+    background: #ffffff;
+    text-align: left;
+    transition: background 0.2s ease;
     padding: 1.5rem;
   }
   
+  .card:hover {
+    background: #f8f8f8;
+  }
+  
   .card-content h2 {
-    font-family: 'Merriweather', serif;
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
-    color: #000;
   }
   
   .card-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    color: #333333;
     margin-bottom: 1.2rem;
-    color: #333;
   }
   
   .visit-button {
     display: inline-block;
     text-decoration: none;
-    background: #000;
-    color: #fff;
+    border: 1px solid #000000;
+    color: #000000;
     padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 600;
+    font-size: 0.9rem;
     transition: background 0.3s ease;
   }
   
   .visit-button:hover {
-    background: #333;
+    background: #000000;
+    color: #ffffff;
   }
   
+  /* Footer */
   footer {
-    background: #000;
-    color: #fff;
     text-align: center;
     padding: 2rem 1rem;
     font-size: 0.9rem;
-    font-family: 'Merriweather', serif;
+    color: #666666;
+    border-top: 1px solid #000000;
+    margin: 2rem -1rem 0 -1rem;
   }
   

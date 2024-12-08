@@ -12,7 +12,7 @@ body, html {
 }
 
 .slider-imgs {
-    background: url('images/campus.jpg') no-repeat center center fixed;
+    background: url('images/campus.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
@@ -81,7 +81,6 @@ body, html {
     color: #555;
 }
 
-/* Itineraries Section */
 .middle-section {
     padding: 40px 20px;
     max-width: 1200px;
@@ -139,6 +138,21 @@ body, html {
 
 .itineraries-main:hover .event-thumb img {
     transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer-section {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-content p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #555;
 }
 
 @media (max-width: 768px) {
