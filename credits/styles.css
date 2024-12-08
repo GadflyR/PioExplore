@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Hero Section */
+  .hero-related {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 -1rem;
+  }
+  
+  .hero-related .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-related .header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 0 1rem;
+  }
+  
+  .hero-related h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-related p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+  }
+  
+  /* Credits Section */
+  .credits-main {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .credits-section {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .credits-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+  }
+  
+  .credits-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333333;
+  }
+  
+  .credits-section hr {
+    width: 60%;
+    margin: 2rem auto;
+    border: none;
+    border-top: 1px solid #000000;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #666666;
+    border-top: 1px solid #000000;
+    margin: 2rem -1rem 0 -1rem;
+  }
+  
