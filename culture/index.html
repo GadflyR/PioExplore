@@ -24,7 +24,7 @@
 
     <section class="introduction">
         <h2>Map of Nationalities</h2>
-        <p> Click on a circle to learn more.</p>
+        <p>Click on a circle to learn more.</p>
     </section>
 
     <div id="map"></div>
@@ -36,19 +36,25 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([20, 0], 2);
+        // Initialize the map with maxBounds to show only one world
+        var map = L.map('map', {
+            worldCopyJump: false,
+            maxBounds: [[-85, -180],[85, 180]], // approximate world bounds
+            maxBoundsViscosity: 1.0 // 'sticky' max bounds
+        }).setView([20, 0], 2);
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            noWrap: true // Prevent the map from repeating world horizontally
         }).addTo(map);
 
         // Student data with approximate coordinates
         var data = [
-            { country: "Turkey", students: 100, lat: 39.9334, lng: 32.8597 },
+            { country: "Türkiye", students: 100, lat: 39.9334, lng: 32.8597 },
             { country: "China", students: 30, lat: 35.8617, lng: 104.1954 },
             { country: "Canada", students: 2, lat: 56.1304, lng: -106.3468 },
             { country: "Portugal", students: 1, lat: 39.3999, lng: -8.2245 },
-            { country: "Balkan Region", students: 2, lat: 43.8563, lng: 18.4131 }, // Sarajevo, Bosnia
+            { country: "Balkan Region", students: 2, lat: 43.8563, lng: 18.4131 }, 
             { country: "South Korea", students: 2, lat: 35.9078, lng: 127.7669 },
             { country: "Mongolia", students: 2, lat: 46.8625, lng: 103.8467 },
             { country: "Kenya", students: 1, lat: -0.0236, lng: 37.9062 },
@@ -58,7 +64,7 @@
             { country: "UK", students: 1, lat: 55.3781, lng: -3.4360 },
             { country: "Brazil", students: 1, lat: -14.2350, lng: -51.9253 },
             { country: "Egypt", students: 1, lat: 26.8206, lng: 30.8025 },
-            { country: "Xinjiang (Uyghur)", students: 2, lat: 43.7922, lng: 87.6177 },
+            { country: "Sinkiang (Uyghur)", students: 2, lat: 43.7922, lng: 87.6177 },
             { country: "Taiwan", students: 1, lat: 23.6978, lng: 120.9605 },
             { country: "Bangladesh", students: 1, lat: 23.6850, lng: 90.3563 },
             { country: "Russia", students: 1, lat: 61.5240, lng: 105.3188 },
@@ -75,7 +81,7 @@
                 color: '#ff914d',
                 fillColor: '#ff914d',
                 fillOpacity: 0.8,
-                weight: 2, // thicker border
+                weight: 2,
                 radius: computedRadius
             };
         }
