@@ -90,7 +90,7 @@
         // Add circles for each country
         data.forEach(function(entry) {
             L.circle([entry.lat, entry.lng], circleStyle(entry.students))
-                .bindPopup(`<strong>${entry.country}</strong><br>${entry.students} student(s)`)
+                .bindPopup(`<strong>${entry.country}</strong>`)
                 .addTo(map);
         });
 
