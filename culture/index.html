@@ -87,12 +87,20 @@
             };
         }
 
-        // Add circles to the map
+        // Add circles for each country
         data.forEach(function(entry) {
             L.circle([entry.lat, entry.lng], circleStyle(entry.students))
                 .bindPopup(`<strong>${entry.country}</strong><br>${entry.students} student(s)`)
                 .addTo(map);
         });
+
+        // Add a marker for the school location in Wayne, NJ
+        var schoolLat = 40.9257;
+        var schoolLng = -74.2765;
+
+        L.marker([schoolLat, schoolLng])
+            .bindPopup("<strong>Our School (Wayne, NJ)</strong>")
+            .addTo(map);
     </script>
 </body>
 </html>
