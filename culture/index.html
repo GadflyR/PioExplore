@@ -50,15 +50,15 @@
 
         // Student data with approximate coordinates
         var data = [
-            { country: "Türkiye", students: 70, lat: 39.9334, lng: 32.8597 },
-            { country: "China", students: 30, lat: 35.8617, lng: 104.1954 },
+            { country: "Türkiye", students: 80, lat: 39.9334, lng: 32.8597 },
+            { country: "China", students: 40, lat: 35.8617, lng: 104.1954 },
             { country: "Canada", students: 2, lat: 56.1304, lng: -106.3468 },
             { country: "Portugal", students: 1, lat: 39.3999, lng: -8.2245 },
-            { country: "Balkan Region", students: 2, lat: 43.8563, lng: 18.4131 }, 
+            { country: "Balkan Region", students: 2, lat: 43.8563, lng: 18.4131 },
             { country: "South Korea", students: 2, lat: 35.9078, lng: 127.7669 },
             { country: "Mongolia", students: 2, lat: 46.8625, lng: 103.8467 },
             { country: "Kenya", students: 1, lat: -0.0236, lng: 37.9062 },
-            { country: "Pakistan", students: 2, lat: 30.3753, lng: 69.3451 },
+            { country: "Pakistan", students: 3, lat: 30.3753, lng: 69.3451 },
             { country: "Palestine", students: 2, lat: 31.9522, lng: 35.2332 },
             { country: "Ukraine", students: 1, lat: 48.3794, lng: 31.1656 },
             { country: "UK", students: 1, lat: 55.3781, lng: -3.4360 },
@@ -69,7 +69,10 @@
             { country: "Bangladesh", students: 1, lat: 23.6850, lng: 90.3563 },
             { country: "Russia", students: 1, lat: 61.5240, lng: 105.3188 },
             { country: "Chechnya", students: 1, lat: 43.3999, lng: 45.7150 },
-            { country: "Kazakhstan", students: 2, lat: 48.0196, lng: 66.9237 }
+            { country: "Kazakhstan", students: 2, lat: 48.0196, lng: 66.9237 },
+            { country: "Nigeria", students: 1, lat: 9.0820, lng: 8.6753 },
+            { country: "Azerbaijan", students: 1, lat: 40.1431, lng: 47.5769 },
+            { country: "India", students: 3, lat: 20.5937, lng: 78.9629 }
         ];
 
         // Define a style for the circles
@@ -84,7 +87,7 @@
             };
         }
 
-        // Add circles to map
+        // Add circles to the map
         data.forEach(function(entry) {
             L.circle([entry.lat, entry.lng], circleStyle(entry.students))
                 .bindPopup(`<strong>${entry.country}</strong><br>${entry.students} student(s)`)
