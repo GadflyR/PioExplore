@@ -50,7 +50,8 @@
 
         // Student data with approximate coordinates
         var data = [
-            { country: "Türkiye", students: 80, lat: 39.9334, lng: 32.8597 },
+            { country: "Türkiye", students: 60, lat: 39.9334, lng: 32.8597 },
+            { country: "Kurdish (Erbil, Iraq)", students: 20, lat: 36.1911, lng: 44.0095 },
             { country: "China", students: 40, lat: 35.8617, lng: 104.1954 },
             { country: "Canada", students: 2, lat: 56.1304, lng: -106.3468 },
             { country: "Portugal", students: 1, lat: 39.3999, lng: -8.2245 },
@@ -72,7 +73,9 @@
             { country: "Kazakhstan", students: 2, lat: 48.0196, lng: 66.9237 },
             { country: "Nigeria", students: 1, lat: 9.0820, lng: 8.6753 },
             { country: "Azerbaijan", students: 1, lat: 40.1431, lng: 47.5769 },
-            { country: "India", students: 3, lat: 20.5937, lng: 78.9629 }
+            { country: "India", students: 3, lat: 20.5937, lng: 78.9629 },
+            { country: "Greece", students: 1, lat: 39.0742, lng: 21.8243 },
+            { country: "Georgia", students: 1, lat: 42.3154, lng: 43.3569 }
         ];
 
         // Define a style for the circles
@@ -87,13 +90,14 @@
             };
         }
 
-        // Add circles for each country
+        // Add circles for each country/region
         data.forEach(function(entry) {
             L.circle([entry.lat, entry.lng], circleStyle(entry.students))
-                .bindPopup(`<strong>${entry.country}</strong>`)
+                .bindPopup(`<strong>${entry.country}</strong><br>${entry.students} student(s)`)
                 .addTo(map);
         });
 
+        // Add a marker for the school location in Wayne, NJ
         var schoolLat = 40.9257;
         var schoolLng = -74.2765;
 
