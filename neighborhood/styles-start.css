@@ -56,48 +56,53 @@ main {
     text-align: center;
 }
 
-.timeline {
-    margin-bottom: 3rem;
-}
-
-.timeline h2 {
+.itineraries h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-.timeline-entry {
+.card-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
-.timeline-entry img {
-    width: 40%;
-    border: 1px solid #000000;
-    border-radius: 8px;
+.card {
+    display: block;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    text-decoration: none;
+    color: #000000;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.timeline-entry .text {
-    width: 60%;
-    text-align: left;
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
-.timeline-entry .text h3 {
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.timeline-entry .text p {
+.card-content p {
     font-size: 1rem;
-    color: #333333;
-    margin-bottom: 1rem;
+    color: #555555;
 }
 
-/* Reversed timeline entries for alternating layout */
-.timeline-entry.reversed {
-    flex-direction: row-reverse;
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 footer {
@@ -111,30 +116,12 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .timeline-entry {
+    .card-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .timeline-entry img, .timeline-entry .text {
-        width: 100%;
+    .card {
+        width: 90%;
     }
-
-    .map iframe {
-        height: 200px;
-    }
-}
-
-/* Styles for Embedded Maps */
-.map {
-    margin-top: 1rem;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.map iframe {
-    width: 100%;
-    height: 200px;
-    border: 0;
 }
