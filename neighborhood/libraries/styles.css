@@ -1,0 +1,141 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('images/neighborhood.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0 -1rem;
+}
+
+header.hero .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header.hero .hero-content {
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20vh;
+    z-index: 1;
+}
+
+header.hero .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header.hero .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+main {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.timeline {
+    margin-bottom: 3rem;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.timeline-entry img {
+    width: 40%;
+    filter: grayscale(100%);
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.timeline-entry .text {
+    width: 60%;
+    text-align: left;
+}
+
+.timeline-entry .text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-entry .text p {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+/* Reversed timeline entries for alternating layout */
+.timeline-entry.reversed {
+    flex-direction: row-reverse;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #666666;
+    border-top: 1px solid #000000;
+    margin: 2rem -1rem 0 -1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-entry {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-entry img, .timeline-entry .text {
+        width: 100%;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+}
+
+/* Styles for Embedded Maps */
+.map {
+    margin-top: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
