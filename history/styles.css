@@ -83,7 +83,6 @@ header.hero .hero-content p {
 
 .timeline-entry img {
     width: 40%;
-    filter: grayscale(100%);
     border: 1px solid #000000;
 }
 
