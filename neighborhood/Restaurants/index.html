@@ -3,115 +3,55 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Restaurants</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles-start.css" />
 </head>
 <body>
     <header class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Local Restaurants</h1>
-            <p>Perfect spots to explore culinary delights and create memorable dining experiences.</p>
+            <h1>Restaurants</h1>
+            <p>Discover a range of dining experiences from cozy cafes to gourmet eateries.</p>
         </div>
     </header>
 
     <main>
-        <section class="timeline">
-            <h2>Asian Cuisine / Hot Pot</h2>
-            <div class="timeline-entry">
-                <img src="../img/VYan.jpg" alt="V-YAN Hot Pot & BBQ" />
-                <div class="text">
-                    <h3>V-YAN Hot Pot & BBQ</h3>
-                    <p>
-                        Casual Korean eatery featuring cook-your-own BBQ & hot pot dishes in a modern interior.
-                        <br/>15 min   11 miles
-                    </p>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187527.97953640725!2d-74.24512547279589!3d40.894167430251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c307912d415385%3A0x84015e8afa9ddf24!2sV-YAN%20Hot%20Pot%20%26%20BBQ!5e0!3m2!1sen!2sus!4v1733889382685!5m2!1sen!2sus"
-                            width="100%"
-                            height="200"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+        <section class="itineraries">
+            <div class="card-container">
+                <a href="https://pioexplore.com/neighborhood/Restaurants/hotpot" class="card">
+                    <img src="../img/VYan.jpg" alt="hotpot" />
+                    <div class="card-content">
+                        <h3>Hot Pot</h3>
+                        <p>Immerse yourself in the rich, communal dining tradition of hot pot, where fresh ingredients and flavorful broths come together for a truly interactive meal experience.</p>
                     </div>
-                </div>
-            </div>
-
-            <div class="timeline-entry reversed">
-                <img src="../img/Grandbuffet.jpg" alt="Grand Buffet" />
-                <div class="text">
-                    <h3>Grand Buffet</h3>
-                    <p>
-                        Casual buffet eatery for Chinese, Japanese, Thai & American dishes plus an à la carte take-out menu.
-                        <br/>31 min   25 miles
-                    </p>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162064.4375454922!2d-74.2359181255926!3d40.99510100086438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2e14c4a42961b%3A0xd8f1855d070793e0!2sGrand%20Buffet!5e0!3m2!1sen!2sus!4v1733889620419!5m2!1sen!2sus"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                </a>
+                <a href="https://pioexplore.com/neighborhood/Restaurants/fastfood" class="card">
+                    <img src="../img/holycowburger.png" alt="fastfood" />
+                    <div class="card-content">
+                        <h3>Fast Food</h3>
+                        <p>Craving something quick and satisfying? Explore a variety of fast food options, from classic burgers and fries to bold, modern twists on your favorites.</p>
                     </div>
-                </div>
-            </div>
-
-            <div class="timeline-entry">
-                <img src="../img/Grandmas.jpg" alt="Grandma's Home 外婆家" />
-                <div class="text">
-                    <h3>Grandma's Home 外婆家</h3>
-                    <p>
-                        Hangzhou Cuisine is a branch of Zhejiang Cuisine which is one of the Eight Traditional Cuisines of China. 
-                        <br/>34 min   21 miles
-                    </p>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272657.02231234085!2d-74.30126579506215!3d40.97134093136577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259b4140aa51b%3A0x202405b6b2e037d3!2zR3JhbmRtYSdzIEhvbWUg5aSW5amG5a62!5e0!3m2!1sen!2sus!4v1733889679183!5m2!1sen!2sus"
-                            width="100%"
-                            height="200"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                </a>
+                <a href="https://pioexplore.com/neighborhood/Restaurants/sushi" class="card">
+                    <img src="../img/sushi.png" alt="sushi" />
+                    <div class="card-content">
+                        <h3>Sushi</h3>
+                        <p>Experience the artistry of sushi, with its delicate balance of fresh fish, rice, and vibrant flavors, all crafted to delight your taste buds.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <h2>Fast Food</h2>
-            <div class="timeline-entry">
-                <img src="../img/Burger-King.png" alt="Burger King (60 Riverview Dr)" />
-                <div class="text">
-                    <h3>Burger King (60 Riverview Dr)</h3>
-                    <p>
-                        Well-known fast-food chain serving grilled burgers, fries & shakes.
-                        <br/>3 min (8 min on foot)   0.8 miles
-                    </p>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68207.072922119!2d-74.25759050295395!3d40.92987968117411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c303587c4531f3%3A0x4f5f9f910e60d4d1!2sBurger%20King!5e0!3m2!1sen!2sus!4v1733889730899!5m2!1sen!2sus"
-                            width="100%"
-                            height="200"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                </a>
+                <a href="https://pioexplore.com/neighborhood/Restaurants/chinese" class="card">
+                    <img src="../img/tasteofchina.png" alt="chinese" />
+                    <div class="card-content">
+                        <h3>Chinese Cuisine</h3>
+                        <p>Delve into the diverse and flavorful world of Chinese cuisine, featuring everything from comforting classics to bold regional specialties.</p>
                     </div>
-                </div>
+                </a>                
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© WGDC 2024 — Eat for live, not live for eat.</p>
+        <p>© WGDC 2024 — Your School's Neighborhood Guide. Building connections beyond the classroom.</p>
     </footer>
 </body>
 </html>
