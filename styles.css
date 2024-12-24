@@ -8,7 +8,83 @@ body, html {
     padding: 0;
     font-family: 'Lato', sans-serif;
     color: #333;
-    background: #f9f9f9;
+    background: #f0f2f5;
+    /* Add top padding to prevent content from being hidden behind the fixed navbar */
+    padding-top: 40px; /* Match navbar height */
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-bar {
+    position: fixed; /* Keeps navbar fixed at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Navbar height */
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+.nav-bar:hover {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.explore-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.explore-links li {
+    position: relative;
+}
+
+.explore-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.explore-links a:hover {
+    background: #e0e0e0;
+    color: #000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
 }
 
 .slider-imgs {
@@ -28,61 +104,34 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
 }
 
 .slider-imgs .background-title {
     font-family: 'TitleFont', serif;
-    font-size: 60px;
+    font-size: 4rem;
     font-weight: 800;
     color: #fff;
     text-shadow: 3px 3px 15px rgba(0,0,0,0.6);
     text-align: center;
     z-index: 2;
     padding: 0 20px;
+    animation: fadeInDown 1s ease-out;
 }
 
-.nav-bar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 10vh;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-}
-
-.explore-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.explore-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    color: #333;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-}
-
-.explore-links a:hover {
-    color: #555;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .middle-section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -90,48 +139,31 @@ body, html {
 .home-itineraries-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 .itineraries-main {
-    background: #fff;
-    border-radius: 8px;
+    background: #ffffff;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-    min-width: 250px;
-    max-width: 300px;
+    width: calc(33.333% - 30px);
+    min-width: 280px;
+    max-width: 350px;
 }
 
 .itineraries-main:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.home-itineraries-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.home-itineraries-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 10px;
-    color: #222;
-}
-
-.itineraries-text {
-    font-size: 14px;
-    color: #777;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 .event-thumb img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -140,38 +172,112 @@ body, html {
     transform: scale(1.05);
 }
 
-/* Footer Section */
-.footer-section {
-    background: #fff;
-    padding: 20px 0;
+.home-itineraries-content {
+    padding: 25px;
     text-align: center;
-    border-top: 1px solid #eee;
+}
+
+.home-itineraries-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 15px 0 10px;
+    color: #222;
+}
+
+.itineraries-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer-section {
+    background: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    transition: background 0.3s ease;
+}
+
+.footer-section:hover {
+    background: #f8f9fa;
 }
 
 .footer-content p {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #555;
 }
 
-@media (max-width: 768px) {
-    .explore-links a {
-        font-size: 1.5rem;
-    }
+.credits-link {
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
 
+.credits-link:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
     .itineraries-main {
-        width: calc(50% - 20px);
+        width: calc(50% - 30px);
     }
 }
 
-@media (max-width: 480px) {
-    .explore-links a {
-        font-size: 1.2rem;
+@media (max-width: 768px) {
+    .explore-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        height: calc(100% - 80px);
+        width: 200px;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .explore-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .middle-section {
+        padding: 40px 15px;
     }
 
     .itineraries-main {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-imgs .background-title {
+        font-size: 2.5rem;
+    }
+
+    .home-itineraries-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .itineraries-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
     }
 }
