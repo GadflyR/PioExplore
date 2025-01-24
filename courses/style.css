@@ -1,0 +1,111 @@
+/* ===== Global Reset ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* 
+     ===== Panel Container =====
+     If you have 10 panels total => 9 subjects + 1 final 
+     => each panel "consumes" ~90vw => 10 * 90vw = 900vw 
+  */
+  .panel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 900vw;  /* 10 panels x 90vw each */
+    height: 100vh;
+    transition: transform 0.7s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 
+     ===== Each Panel =====
+     We'll allocate 80vw for content + 5vw margin on left & right => total ~90vw usage 
+     Also add top/bottom margin => e.g., 2rem 
+  */
+  .subject-panel {
+    flex: 0 0 80vw;        /* the panel's main width is 80vw */
+    margin: 2rem 5vw;      /* top/bottom = 2rem, left/right = 5vw => 80+10 = 90vw total usage */
+    height: calc(100vh - 4rem); /* height minus top/bottom margins => show partial vertical adjacency if desired */
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  /* For a subtle alternating background if you like */
+  .subject-panel:nth-child(even) {
+    background-color: #f0f4fc;
+  }
+  
+  /* Panel headings, etc. */
+  .subject-panel h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+  }
+  
+  /* Example styling for your tables, can be the same as before */
+  .course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  .course-table th, .course-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  /* 
+     ===== Final Panel More Conspicuous ===== 
+     Let's override the background color and heading style
+  */
+  .final-panel {
+    background-color: #ffe8b3 !important; /* bright or warm highlight */
+  }
+  .final-panel h2 {
+    color: #d35400;     /* deeper color for heading */
+    font-size: 1.6rem;  /* bigger text */
+    margin-top: 0;
+  }
+  
+  /* ===== ARROW BUTTONS ===== */
+  .arrow-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    line-height: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background-color 0.2s;
+  }
+  .arrow-button:hover {
+    background-color: #005bb5;
+  }
+  .arrow-left {
+    left: 1rem;
+  }
+  .arrow-right {
+    right: 1rem;
+  }
+  
