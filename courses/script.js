@@ -128,7 +128,6 @@ const RAW_COURSES = [
     const lower = courseName.toLowerCase();
     if (lower.includes("ap ")) return "ap";
     if (lower.includes("honors")) return "honors";
-    if (lower.includes("cp") || lower.includes("college prep")) return "cp";
     return "standard";
   }
   
